@@ -10,8 +10,10 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -48,8 +50,14 @@ public class MainActivity extends AppCompatActivity {
 
         ListView myListView = (ListView)findViewById(R.id.my_listview);
 
+        myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Tuggummi n = namnen.get(position);
+                Toast.makeText(MainActivity.this,n.fakta(), Toast.LENGTH_LONG).show();
+            }
+        });
         myListView.setAdapter(adapter);
-
     }
 
     @Override
@@ -137,7 +145,15 @@ public class MainActivity extends AppCompatActivity {
                 adapter.clear();
                 for (int r=0;r<allt.length();r++) {
                     JSONObject obj=allt.getJSONObject(r);
+                    String ID=obj.getString("ID");
                     String name=obj.getString("name");
+                    String company=obj.getString("company");
+                    String location=obj.getString("location");
+                    String category=obj.getString("category");
+                    int cost=obj.getInt("cost");
+                    Log.d("Hej", Integer.toString(r) + ID + name + company + location + category + cost);
+                    Tuggummi temp= new Tuggummi(ID, name, company, location, category, cost);
+                    adapter.add(temp);
                 }
             }
             catch (JSONException e) {

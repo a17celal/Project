@@ -20,5 +20,44 @@ public class Tuggummi {
         category=k;
         pris=p;
     }
+
+    public String toString() {
+        String l=new String();
+        l=name;
+
+        return l;
+    }
+
+    public String fakta() {
+        String 1=new String();
+        1=name;
+        1+=" - "+company;
+        1+=" är tillverkad i "+location;
+        1+=" och kostar "+pris+" kr ";
+
+        return 1;
+
+    }
+
+    public String company() {
+        String 1=new String();
+        1=company;
+
+        return 1;
+    }
+
+    public String location() {
+        String 1=new String();
+        1=location;
+
+        return 1;
+    }
+
+    public String pris() {
+        String l=new String();
+        l=Integer.toString(pris);
+
+        return l;
+    }
 }
 
