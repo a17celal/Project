@@ -29,28 +29,29 @@ public class Tuggummi {
     }
 
     public String fakta() {
-        String 1=new String();
-        1=name;
-        1+=" - "+company;
-        1+=" är tillverkad i "+location;
-        1+=" och kostar "+pris+" kr ";
 
-        return 1;
+        String l = new String();
+        l=name;
+        l+=" - "+company;
+        l+=" är tillverkad i "+location;
+        l+=" och kostar "+pris+" kr ";
+
+        return l;
 
     }
 
     public String company() {
-        String 1=new String();
-        1=company;
+        String l=new String();
+        l=company;
 
-        return 1;
+        return l;
     }
 
     public String location() {
-        String 1=new String();
-        1=location;
+        String l=new String();
+        l=location;
 
-        return 1;
+        return l;
     }
 
     public String pris() {

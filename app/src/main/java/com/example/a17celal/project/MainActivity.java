@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         List<String> listData = new ArrayList<String>(Arrays.asList(gumNames));
 
         adapter = new ArrayAdapter(getApplicationContext(),R.layout.list_item_textview,
-                R.id.my_item_textview, listData);
+                R.id.my_item_textview, namnen);
 
         ListView myListView = (ListView)findViewById(R.id.my_listview);
 
