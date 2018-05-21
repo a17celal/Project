@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.about) {
-            Toast.makeText(MainActivity.this,"about", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this,"Detta är en app för dig som tycker om tuggummin. Här kan du ha koll på de senaste nyheterna, men även jämföra de olika sorterna med varandra, t.ex. priser.", Toast.LENGTH_LONG).show();
             return true;
         }
 
